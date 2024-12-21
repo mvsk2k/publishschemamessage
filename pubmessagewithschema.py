@@ -25,6 +25,9 @@ import json
 message_json = json.dumps(message_data)
 
 # Publish the message
+
+"""
+# This also worked, Publish the message
 future = publisher.publish(
     topic_path,
     data=message_json.encode("utf-8"),
@@ -34,3 +37,12 @@ future = publisher.publish(
 )
 
 print(f"Message published with ID: {future.result()}")
+
+"""
+
+# This also worked, Publish the message
+try:
+    future = publisher.publish(topic_path, data=message_json.encode("utf-8"))
+    print(f"Message published with ID: {future.result()}")
+except Exception as e:
+    print(f"Failed to publish message: {e}")
