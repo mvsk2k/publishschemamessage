@@ -18,6 +18,7 @@ message_data = {
      "Name": "M V SIVAKUMAR",
      "Age": 50,
      "Email": "skmar@gmail.com"
+     #"Email": 25
    }
 
 # Convert the message to a JSON string
